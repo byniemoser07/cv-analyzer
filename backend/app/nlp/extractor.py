@@ -1,8 +1,6 @@
 import re
 import spacy
-
 from app.data.skills import SKILLS
-
 nlp = spacy.load("en_core_web_sm")
 
 DEGREES = [

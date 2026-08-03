@@ -24,6 +24,9 @@ app.add_middleware(
         "http://127.0.0.1:5174",
         "http://localhost:5175",
         "http://127.0.0.1:5175",
+
+        # Vercel Frontend
+        "https://cv-analyzer-pr3u8bxxf-byniemoser07s-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],

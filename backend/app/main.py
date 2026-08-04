@@ -17,18 +17,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5174",
-        "http://localhost:5175",
-        "http://127.0.0.1:5175",
-
-        # Vercel Frontend
-        "https://cv-analyzer-pr3u8bxxf-byniemoser07s-projects.vercel.app",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -48,7 +38,6 @@ app.include_router(analyze_router)
 
 @app.get("/")
 def home():
-
     return {
         "message": "AI Resume Analyzer API",
         "version": "2.0",
@@ -62,61 +51,32 @@ def home():
 
 @app.get("/about")
 def about():
-
     return {
-
         "project": "AI Resume Analyzer",
-
         "developer": "Akarshit Singh",
-
         "version": "2.0",
-
         "features": [
-
             "Resume Parsing",
-
             "ATS Score",
-
             "Keyword Matching",
-
             "Semantic Matching",
-
             "GitHub Analysis",
-
             "Overall Candidate Score",
-
             "Summary Generator",
-
             "Recommended Roles",
-
             "Learning Roadmap",
-
             "Resume Feedback",
-
             "Strength Meter",
-
             "Dashboard Statistics",
-
             "Skill Gap Analysis",
-
             "Resume Grade",
-
             "Hiring Recommendation",
-
             "Missing Skills Priority",
-
             "Salary Prediction",
-
             "Interview Readiness",
-
             "Resume Completeness",
-
             "Candidate Ranking",
-
             "Interview Questions",
-
             "Resume Tips"
-
         ]
-
     }

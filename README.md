@@ -230,8 +230,8 @@ http://localhost:5173
 
 GitHub: https://github.com/byniemoser07
 
-LinkedIn: https://www.linkedin.com/in/akarshit-singh/
-
+[LinkedIn: https://www.linkedin.com/in/akarshit-singh/
+](https://www.linkedin.com/in/akarshit-singh-012788287/)
 ---
 
 ## License
